@@ -1,6 +1,6 @@
 import React from 'react';
 import { FlatList } from 'react-native-gesture-handler'
-import  {ServicesData}  from '../data/ServicesData'
+import ServicesData  from '../data/ServicesData'
 import ServicesGrid from '../components/barberShopScreens/ServicesGrid'
 import {View, Share } from 'react-native'
 import {HeaderButtons, Item} from 'react-navigation-header-buttons'
@@ -12,16 +12,17 @@ const BarberShops = props =>{
 
   const renderGridItem = itemData =>{
     return(
-          <ServicesGrid 
-      title={itemData.item.title}
-      servicesImages = {itemData.item.image}
-      onSelect={()=>{
-        props.navigation.navigate({routeName: 'Barber_Services',
-        // params:{
-        //   shopId : itemData.item.id
-        // }
-      });
-      }}/>
+          <ServicesGrid/> 
+      // title={itemData.item.title}
+      // servicesImages = {itemData.item.image}
+      // onSelect={()=>{
+      //   props.navigation.navigate({routeName: 'Barber_Services',
+      //   // params:{
+      //   //   shopId : itemData.item.id
+      //   // }
+      // });
+      // }}
+      
      
     );
   };
@@ -29,7 +30,7 @@ const BarberShops = props =>{
   return (
   <View style={{width:'100%'}}>    
   <FlatList 
-  keyExtractor={(item,index)=> item.id}
+  keyExtractor={(item)=> item.id}
   data={ServicesData}
   renderItem={renderGridItem} 
   />
@@ -39,7 +40,7 @@ const BarberShops = props =>{
 
 BarberShops.navigationOptions = navData => {
   return{    
-  headerTitle:'Home',
+  headerTitle:'Homes',
   headerLeft: () => (
   <HeaderButtons HeaderButtonComponent = {HeaderButton}>
     <Item 

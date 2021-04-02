@@ -12,11 +12,73 @@ import ContactUsStackNavigation from './stackNavigation/ContactUsStackNavigation
 import TermandConditionStackNavigation from './stackNavigation/TermandConditionStackNavigation';
 import FAQStackNavigation from './stackNavigation/FAQStackNavigation';
 import { ScrollView } from 'react-native-gesture-handler'
+import {createBottomTabNavigator} from "react-navigation-tabs"
+import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom-tabs'
+
+
+
+const tabScreenConfig = {
+  Home: {
+  screen: BarberShopsStackNavigation,
+  navigationOptions:{
+    tabBarIcon: (tabInfo) => {
+      return <Ionicons name = 'home' size={25} color={tabInfo.tintColor}/>
+    },
+    tabBarColor: Color.accentColour
+  },
+      
+},
+  AboutUs:{
+    screen: AboutStackNavigation,
+    navigationOptions:{
+      tabBarIcon: (tabInfo) => {
+  return <Ionicons name = 'information-circle-sharp'size={29} color={tabInfo.tintColor}/>
+    },
+    tabBarColor: Color.primaryColour
+
+  },
+  },
+  Partnership: {
+    screen: PartnersStackNavigation,
+    navigationOptions:{
+      tabBarIcon: (tabInfo) => {
+  return <Ionicons name = 'people-sharp'size={25} color={tabInfo.tintColor}/>
+      },
+    tabBarColor: Color.accentColour
+
+    },
+  },
+  ContactUs: { 
+    screen:ContactUsStackNavigation,
+    navigationOptions:{
+      tabBarIcon: (tabInfo) => {
+        return <Ionicons name = 'call-sharp'size={25} color={tabInfo.tintColor}/>
+      },
+    tabBarColor: Color.primaryColour
+
+    },
+  },
+
+};
+
+const CompaniesTabNavigator = Platform.OS==='android'? createMaterialBottomTabNavigator(tabScreenConfig, {
+  activeTintColor: 'white',
+  shifting:true
+}) 
+: createBottomTabNavigator (
+  tabScreenConfig,
+  {
+  tabBarOptions:{
+    activeTintColor: Color.primaryColour
+  },
+});
+
+
 
 
 const MainDrawerNavigator = createDrawerNavigator({
-    companiesDrawer: {
-      screen: BarberShopsStackNavigation,
+    BarberShops: {
+      screen: CompaniesTabNavigator,
       navigationOptions:{
         drawerIcon: () => (
           <Ionicons name = 'home' size={25} color='white'/>
@@ -117,9 +179,9 @@ const MainDrawerNavigator = createDrawerNavigator({
       
     ), 
     drawerBackgroundColor: Color.drawerColor,
-     width: Dimensions.get('window').width * .75,
+    // width: Dimensions.get('window').width * 2,
     contentOptions:{
-      activeTintColor:Color.primaryColour,
+      activeTintColor:Color.accentColour,
       inactiveTintColor: 'white',
       itemsContainerStyle: {
         marginVertical: 30,

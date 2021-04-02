@@ -8,15 +8,16 @@ Dimensions,
 let {width:screenWidth, height:screenHeight} = Dimensions.get('window')
 
 const ServicesGrid = (props) => {
-let TouchableCom = TouchableOpacity;
+// let TouchableCom = TouchableOpacity;
 
-if (Platform.OS==="android" && Platform.Version >= 21){
-  TouchableCom = TouchableNativeFeedback;
-}
+// if (Platform.OS==="android" && Platform.Version >= 21){
+//   TouchableCom = TouchableNativeFeedback;
+// }
   return(
     
-  <View style={AllStyle.mainConmpaniesDiv}>
-    <TouchableCom style={{flex:1}}
+  <View style={{flex:1}}>
+    <Text>Home Page</Text>
+    {/* <TouchableCom style={{flex:1}}
       onPress={props.onSelect}>
       <Card>
     
@@ -24,18 +25,18 @@ if (Platform.OS==="android" && Platform.Version >= 21){
   
     </Card.Image>
     <Card.Title style={{fontFamily: 'open-sans-bold'}}>{props.title}</Card.Title>
-    <Card.Divider/>
+    <Card.Divider/> */}
 
     {/* <Text style={{marginBottom: 12 }}>
  {item.detail}
       </Text> */}
-      <Button
+      {/* <Button
       
         icon={<Icon name='code' color='#ffffff' />}
         buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0, backgroundColor:'#6c398f'}}
         title='MORE INFO' />
   </Card>
-      </TouchableCom>
+      </TouchableCom> */}
       </View>
       
   );

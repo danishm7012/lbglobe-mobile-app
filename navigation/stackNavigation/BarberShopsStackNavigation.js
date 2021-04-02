@@ -9,7 +9,8 @@ import {Platform } from "react-native"
 const BarberStackNavigation = createStackNavigator({
   
     Barber_Shops: {
-    screen: BarberShops,
+    
+      screen: BarberShops,
 },
 Barber_Services:
   {
