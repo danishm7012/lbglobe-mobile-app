@@ -4,6 +4,7 @@ const ServicesData = [
         image:require('../assets/images/mainServicesImgs/businessLearning.jpg'),
         logo:require('../assets/images/mainServicesImgs/shop.jpg'),
         title:'E-commerce Business Learnings',
+        
     },
        
     {   
@@ -20,3 +21,5 @@ const ServicesData = [
         title:'Digital Marketing',
     },
 ];
+
+export default ServicesData 

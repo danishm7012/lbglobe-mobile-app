@@ -14,7 +14,7 @@ const BarberStackNavigation = createStackNavigator({
 },
 Barber_Services:
   {
-    screen: BarberServices,
+    screen: BarberServices,   
 },
 BarberBook_Appointment:{
     screen :BarberBookAppointment,
@@ -26,7 +26,7 @@ BarberBook_Appointment:{
   defaultNavigationOptions:{
     headerTitleAlign:'center',
     headerStyle:{
-  backgroundColor: Platform.OS==='android' ? Color.accentColour : Color.primaryColour
+  backgroundColor: Platform.OS==='android' ? Color.primaryColour : Color.accentColour
         
 },
     headerTitleStyle:{
