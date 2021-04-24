@@ -17,64 +17,6 @@ import EcommerceBusinessStackNavigation from './stackNavigation/ECommerceStackNa
 import ITServicessStackNavigation from './stackNavigation/ITServicesStackNavigation';
 
 
-// const tabScreenConfig = {
-//   Home: {
-//   screen: BarberShopsStackNavigation,
-//   navigationOptions:{
-//     tabBarIcon: (tabInfo) => {
-//       return <Ionicons name = 'home' size={25} color={tabInfo.tintColor}/>
-//     },
-//     tabBarColor: Color.accentColour
-//   },
-      
-// },
-//   AboutUs:{
-//     screen: AboutStackNavigation,
-//     navigationOptions:{
-//       tabBarIcon: (tabInfo) => {
-//   return <Ionicons name = 'information-circle-sharp'size={29} color={tabInfo.tintColor}/>
-//     },
-//     tabBarColor: Color.primaryColour
-
-//   },
-//   },
-//   Partnership: {
-//     screen: PartnersStackNavigation,
-//     navigationOptions:{
-//       tabBarIcon: (tabInfo) => {
-//   return <Ionicons name = 'people-sharp'size={25} color={tabInfo.tintColor}/>
-//       },
-//     tabBarColor: Color.accentColour
-
-//     },
-//   },
-//   ContactUs: { 
-//     screen:ContactUsStackNavigation,
-//     navigationOptions:{
-//       tabBarIcon: (tabInfo) => {
-//         return <Ionicons name = 'call-sharp'size={25} color={tabInfo.tintColor}/>
-//       },
-//     tabBarColor: Color.primaryColour
-
-//     },
-//   },
-
-// };
-
-// const CompaniesTabNavigator = Platform.OS==='android'? createMaterialBottomTabNavigator(tabScreenConfig, {
-//   activeTintColor: 'white',
-//   shifting:true
-// }) 
-// : createBottomTabNavigator (
-//   tabScreenConfig,
-//   {
-//   tabBarOptions:{
-//     activeTintColor: Color.primaryColour
-//   },
-// });
-
-
-
 
 const MainDrawerNavigator = createDrawerNavigator({
     BarberShops: {
@@ -88,16 +30,6 @@ const MainDrawerNavigator = createDrawerNavigator({
       }
     
     },
-//   cosmopolitanDrawer: {
-//     screen: EuropeStackNavigator,
-//     navigationOptions:{
-//       drawerIcon: () => (
-//         <Ionicons name = 'globe' size={25} color='white'/>
-//       ),
-      
-//       drawerLabel:'CosmopolitanIntrest',
-//     }
-//   },
 
 EcommerceBusiness:{
   screen:EcommerceBusinessStackNavigation,
@@ -182,12 +114,6 @@ ContactUs:{
   
   
   },{
-    // drawerIcon: ({ tintColor }) => (
-    //   <Image
-    //     source={require('../assets/images/logos/logo.png')}
-    //     style={[styles.icon, { tintColor: 'white' }]}
-    //   />
-    // ),
     contentComponent: (props) => (
       <ScrollView>
       <SafeAreaView style={{flex:1}}
@@ -203,9 +129,7 @@ ContactUs:{
       </ScrollView>
       
     ),
-    // drawerWidth: Dimensions.get('window').width * 1,
     drawerBackgroundColor: Color.drawerColor,
-    // width: Dimensions.get('window').width * 2,
     contentOptions:{
       activeTintColor:'hsla(360, 100%, 100%, 1.0)',
       activeBackgroundColor : Color.accentColour,

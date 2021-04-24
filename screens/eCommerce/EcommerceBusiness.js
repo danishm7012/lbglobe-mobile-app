@@ -8,10 +8,6 @@ import BarberServicesGrid from '../../components/barberShopScreens/BarberService
 
 const EcommerceBusiness = props =>{
   
-//   const shId = props.navigation.getParam('shopId');
-//   const displayedSubCompanies = NationalCompanies.filter(
-//     company=> company.companyIds.indexOf(shId) >= 0 );
-
 const shTitle = 'E-commerce Business Learnings';
 const displayedSubCompanies = NationalCompanies.filter(
   company=> company.category === shTitle  );

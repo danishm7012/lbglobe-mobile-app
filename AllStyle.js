@@ -201,16 +201,17 @@ Aboutdetail:{
     fontWeight: '600',
     textAlign: 'justify',
     width: screenWidth * 0.93,
-    
+  marginLeft:8,  
     
     fontSize: 16,
     lineHeight: 16 * 1.5,
-    //paddingBottom:30,
   
 },
 Aboutheading: {
   marginTop:15,
   color: '#444',
+  marginLeft:8,  
+
   textTransform: 'uppercase',
  // fontSize: 24,
   
@@ -229,13 +230,13 @@ Aboutheading: {
 
 mainContactForm:{
   flex:1,
-  padding:30,
+  paddingHorizontal:30,
 
 },
 contactUsImagesView:{
-  flex:1,
+  flex:0.6,
   width:screenWidth,
-  height:screenHeight/3,
+  //height:screenHeight/3.5,
 },
 contactUsImages:{
   flex:1,
@@ -243,7 +244,7 @@ contactUsImages:{
   resizeMode:'stretch'
 },
 contactUsformMainHeading:{
-  flex:1,
+  flex:0.2,
   justifyContent:'center',
   alignItems:'center',
 },
@@ -264,7 +265,7 @@ contactUsformMainHeadingInner:{
 
 },
 TextinputfieldcontactUs:{
-  paddingTop:10,
+  paddingTop:8,
   borderBottomColor: '#0f385a',
   borderBottomWidth:2,
   color:'#0f385a',

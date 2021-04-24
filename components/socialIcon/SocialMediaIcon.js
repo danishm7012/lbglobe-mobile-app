@@ -4,11 +4,6 @@ import { View,Linking } from 'react-native';
 
 const SocialMediaIcon = ({facebookSocial,twitterSocial,linkedInSocial,instagramSocial,websiteSocial}) =>{
 
-  // facebook={facebook}
-  // twitter={twitter}
-  // linkedIn={linkedIn}
-  // instagram={instagram}
-  // website={website}
 
     return(
         <View style={{flex:1, flexDirection:'row', position:'absolute',bottom:0}}>

@@ -8,11 +8,6 @@ import HeaderButton from '../components/headerButton/HeaderButton'
 
 const BarberServices = props =>{
 
-  
-//   const shId = props.navigation.getParam('shopId');
-//   const displayedSubCompanies = NationalCompanies.filter(
-//     company=> company.companyIds.indexOf(shId) >= 0 );
-
   const shTitle = props.navigation.getParam('shopTitle');
   const displayedSubCompanies = NationalCompanies.filter(
     company=> company.category === shTitle  );
@@ -48,7 +43,6 @@ const BarberServices = props =>{
     <View style={{flex:1}}>
     <FlatList data={displayedSubCompanies}
       
-    // ListHeaderComponent={ <CustomCarousel/> }
       keyExtractor={(item) => item.id}
      renderItem={renderCompanyItem}
      numColumns={1}

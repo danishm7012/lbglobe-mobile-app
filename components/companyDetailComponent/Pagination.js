@@ -52,11 +52,7 @@ const Pagination = ({ scrollX }) => {
             </View>
           );
         })}
-        {/* <View>
-          <Text>
-            Swipe
-          </Text>
-        </View> */}
+
       </View>
     );
   };

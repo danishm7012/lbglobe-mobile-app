@@ -37,11 +37,7 @@ const BarberShops = (props) =>{
         renderItem={renderItem}
         numColumns={1}
       />
-  {/* <FlatList 
-  keyExtractor={(item)=> item.id}
-  data={ServicesData}
-  renderItem={renderGridItem} 
-  /> */}
+
   </View>
 );
 };

@@ -23,13 +23,7 @@ const CIRCLE_SIZE = width * 0.5;
 
 const Item = ({ imageUri,iconName,iconLocation, heading, index, phnNum,address, description, scrollX }) => {
 
-  // const [index,setIndex] = useState([
-  //   {id:'1',indexes:'0'},
-  //   {id:'2',indexes:'1'},
-  //   {id:'3',indexes:'2'},
-  //   {id:'4',indexes:'3'},
-  // ])
-  
+
     const inputRange = [(index - 1) * width, index * width, (index + 1) * width];
     const inputRangeOpacity = [
       (index - 0.3) * width,

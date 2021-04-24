@@ -9,10 +9,6 @@ import BarberServicesGrid from '../../components/barberShopScreens/BarberService
 
 const DigitalMarketing = props =>{
    
-//   const shId = props.navigation.getParam('shopId');
-//   const displayedSubCompanies = NationalCompanies.filter(
-//     company=> company.companyIds.indexOf(shId) >= 0 );
-
 const shTitle = 'Digital Marketing';
 const displayedSubCompanies = NationalCompanies.filter(
   company=> company.category === shTitle  );

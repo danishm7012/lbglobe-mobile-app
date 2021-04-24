@@ -62,15 +62,7 @@ const BarberBookAppointment = (props) => {
         description: selectedCompany.vision,
         key: 'third',
       },
-      // {
-      //   type: 'Aim',
-      //   imageUri: require('../assets/urbanears_mint.jpg'),
-      //   color: '#a1e3a1',
-      //   heading: 'From Sweden',
-      //   description:
-      //     'The “Plattan” in Plattan headphones is Swedish for “the slab.”',
-      //   key: 'fourth',
-      // },
+
     ];
     
 
@@ -79,7 +71,6 @@ const BarberBookAppointment = (props) => {
   
     return (
       <View style={AllStyles.container}>
-        {/* <StatusBar style='auto' hidden /> */}
         <Circle scrollX={scrollX} />
         <Animated.FlatList
           keyExtractor={(item) => item.key}
@@ -98,7 +89,6 @@ const BarberBookAppointment = (props) => {
         />
         <View style={{justifyContent:'center',alignItems:'center'}}>
         <SocialMediaIcon
-        //  style={AllStyles.logo}
          style={{position:'absolute'}}
          facebookSocial={selectedCompany.facebook}
          twitterSocial={selectedCompany.twitter}

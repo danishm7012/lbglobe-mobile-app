@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import {View ,Image,TextInput, Button,StatusBar, Text, ScrollView, SafeAreaView} from 'react-native';
+import {View ,Image,TextInput, Button,StatusBar, Text, ScrollView,KeyboardAvoidingView, SafeAreaView} from 'react-native';
 import {HeaderButtons, Item} from 'react-navigation-header-buttons'
 import HeaderButton from '../../components/headerButton/HeaderButton'
 import axios from 'react-native-axios'
@@ -50,7 +50,10 @@ const ContactUs = props =>{
 
   return(
 
-    
+    <KeyboardAvoidingView
+    behavior={Platform.OS === "ios" ? "padding" : "height"}
+    style={{flex:1}}
+  >
     <View style={{flex:1}}>
       <View style={AllStyle.contactUsImagesView}>
         <Image source={require('../../assets/ContactUS.jpg')}
@@ -61,8 +64,6 @@ const ContactUs = props =>{
       <View style={AllStyle.contactUsformMainHeading}>
       <Text style={AllStyle.contactUsformMainHeadingOuter}> Contact <Text style={AllStyle.contactUsformMainHeadingInner}> Us</Text> </Text>
       </View>
-      <SafeAreaView style={{paddingTop: StatusBar.currentHeight}} >
-      <ScrollView style={{ }}>
       <View style={{flex:1}}>
         <View  style={{flex:1}}>
         <TextInput
@@ -98,22 +99,11 @@ const ContactUs = props =>{
         placeholder="Leave your Message Here !" 
         placeholderTextColor = "#0f385a"
         multiline={true}
-        numberOfLines={4}
+        numberOfLines={2}
         onChangeText={(usermessage)=> setMessage(usermessage)}
         value={message}
         />
         </View>
-      
-        {/* <Slider
-          step={1}
-          minimumValue={0}
-          maximumValue={100}
-          value={value}
-          onValueChange={slideValue => setValue(slideValue)}
-          minimumTrackTintColor="#1fb28a"
-          maximumTrackTintColor="#d3d3d3"
-          thumbTintColor="#b9e4c9"
-        /> */}
       
       </View>
       <View style={{paddingTop: StatusBar.currentHeight}}>
@@ -127,8 +117,7 @@ const ContactUs = props =>{
 
       <View style={{paddingTop: StatusBar.currentHeight*2.5, justifyContent:'center',alignItems:'center'}}>
         <SocialMediaIcon
-        //  style={AllStyles.logo}
-        //  style={{position:'absolute'}}
+
          facebookSocial={socialLinks.facebook}
          twitterSocial={socialLinks.twitter}
          linkedInSocial={socialLinks.linkedIn}
@@ -137,12 +126,9 @@ const ContactUs = props =>{
         />
         </View>
 
-
-</ScrollView>
-</SafeAreaView>
       </View>
     </View>
-    
+    </KeyboardAvoidingView>
     
   );
 };
