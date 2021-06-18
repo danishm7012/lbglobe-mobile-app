@@ -1,6 +1,6 @@
 import React from 'react'
 import { SocialIcon } from 'react-native-elements'
-import { View, Linking } from 'react-native'
+import { View, Text, Linking } from 'react-native'
 
 const SocialMediaIcon = ({
   facebookSocial,
@@ -14,8 +14,6 @@ const SocialMediaIcon = ({
       style={{
         flex: 1,
         flexDirection: 'row',
-        position: 'absolute',
-        bottom: 80,
       }}
     >
       <SocialIcon

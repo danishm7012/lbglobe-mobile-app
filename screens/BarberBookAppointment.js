@@ -89,7 +89,6 @@ const BarberBookAppointment = (props) => {
         }}
       >
         <SocialMediaIcon
-          style={{ position: 'absolute' }}
           facebookSocial={selectedCompany.facebook}
           twitterSocial={selectedCompany.twitter}
           linkedInSocial={selectedCompany.linkedin}
